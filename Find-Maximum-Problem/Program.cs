@@ -16,7 +16,7 @@ namespace Find_Maximum_Problem
         /// <param name="num1"></param>
         /// <param name="num2"></param>
         /// <param name="num3"></param>
-        /// <returns>maximum number</returns>
+        /// <returns>maximum number of 3 integers</returns>
         public int IntegerMaximum(int num1, int num2, int num3)
         {
             if (num1.CompareTo(num2) > 0)
