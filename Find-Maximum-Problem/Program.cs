@@ -40,7 +40,18 @@ namespace Find_Maximum_Problem
                 return (num2.CompareTo(num3) > 0) ? num2 : num3;
             }
         }
-
+        //String Maximum Method
+        public string StringMaximum(string str1, string str2, string str3)
+        {
+            if (str1.CompareTo(str2) > 0)
+            {
+                return (str1.CompareTo(str3) > 0) ? str1 : str3;
+            }
+            else
+            {
+                return (str2.CompareTo(str3) > 0) ? str2 : str3;
+            }
+        }
 
         int IComparable.CompareTo(object obj)
         {
