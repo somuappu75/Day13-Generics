@@ -10,7 +10,8 @@ namespace Find_Maximum_Problem
         {
             Find_Maximum_Problem<int> findMax = new Find_Maximum_Problem<int>();
             findMax.MaxMethod(3, 4, 8, 1, 60);
-            
+            Find_Maximum_Problem<int> findmax = new Find_Maximum_Problem<int>(5, 7, 9);
+            findMax.TestMaximum();
         }
         //Integer Max
         public int IntegerMaximum(int value1, int value2, int value3)
