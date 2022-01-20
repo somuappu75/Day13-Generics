@@ -4,8 +4,14 @@ using System.Text;
 
 namespace Find_Maximum_Problem
 {
-    class FindMaximumValue
+     public class FindMaximumValue
     {
+        public static void main(String[] args)
+        {
+            Find_Maximum_Problem<int> findMax = new Find_Maximum_Problem<int>();
+            findMax.MaxMethod(3, 4, 8, 1, 60);
+            
+        }
         //Integer Max
         public int IntegerMaximum(int value1, int value2, int value3)
         {
@@ -40,14 +46,41 @@ namespace Find_Maximum_Problem
 
         GenericType value1,
                     value2,
-                    value3;
+                    value3,
+                    maxValue;
+        
+        
+        public Find_Maximum_Problem() { }
 
-        public GenericType TestMaximum(GenericType value1, GenericType value2, GenericType value3)
+        public Find_Maximum_Problem(GenericType value1, GenericType value2, GenericType value3)
+        {
+            this.value1 = value1;
+            this.value2 = value2;
+            this.value3 = value3;
+        }
+
+        public GenericType MaxMethod(params GenericType[] array)
+        {
+            int length = array.Length;
+            Array.Sort(array);
+            this.maxValue = array[array.Length - 1];
+            PrintMax();
+            return this.maxValue;
+        }
+
+        public void PrintMax()
+        {
+            Console.WriteLine($"Maximum value : {this.maxValue}");
+        }
+        public GenericType TestMaximum()
         {
             if (value1.CompareTo(value2) > 0)
-                return (value1.CompareTo(value3) > 0) ? value1 : value3;
+                this.maxValue = (value1.CompareTo(value3) > 0) ? value1 : value3;
             else
-                return (value2.CompareTo(value3) > 0) ? value2 : value3;
+                this.maxValue = (value2.CompareTo(value3) > 0) ? value2 : value3;
+
+            PrintMax();
+            return maxValue;
         }
     }
 }
