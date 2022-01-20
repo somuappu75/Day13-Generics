@@ -42,6 +42,13 @@ namespace Find_Maximum_Problem
                     value2,
                     value3;
 
+        public Find_Maximum_Problem(GenericType value1, GenericType value2, GenericType value3)
+        {
+            this.value1 = value1;
+            this.value2 = value2;
+            this.value3 = value3;
+        }
+
         public GenericType TestMaximum(GenericType value1, GenericType value2, GenericType value3)
         {
             if (value1.CompareTo(value2) > 0)
